@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
             techStack: ["React", "Firebase"], 
             image: "assets/ainaabdul.PNG",
             liveDemo: "https://hanepo.github.io/ainaabdul-demo/",
-            github: "https://github.com/hanepo/ainationsfc-demo.git"
+            github: "https://github.com/hanepo/ainaabdul-demo"
         },
         { 
             title: "MediCompanion AI", 
