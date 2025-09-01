@@ -15,47 +15,47 @@ document.addEventListener("DOMContentLoaded", function() {
             description: "A complete online food ordering system with menu browsing, cart, and payment features.", 
             techStack: ["React", "Laravel", "MySQL"], 
             image: "assets/restaurantbooking.PNG",
-            liveDemo: "#", // Replace with your live demo URL
-            github: "https://github.com/hanep/restaurant-ordering-system" // Replace with your GitHub repo URL
+            liveDemo: "https://hanepo.github.io/client-restaurant-demo/", // Replace with your live demo URL
+            github: "https://github.com/hanepo/client-restaurant-demo.git" // Replace with your GitHub repo URL
         },
         { 
             title: "Aina Abdul Fans Club Registration System", 
             description: "A fan club registration website for Aina Abdul fans, allowing users to sign up and manage memberships.", 
             techStack: ["React", "Firebase"], 
             image: "assets/ainaabdul.PNG",
-            liveDemo: "#", // Replace with your live demo URL
-            github: "https://github.com/hanep/aina-abdul-fan-club" // Replace with your GitHub repo URL
+            liveDemo: "https://hanepo.github.io/ainationsfc-demo/", // Replace with your live demo URL
+            github: "https://github.com/hanepo/ainationsfc-demo.git" // Replace with your GitHub repo URL
         },
         { 
             title: "MediCompanion AI", 
             description: "A healthcare mobile app for elderly users with medication reminders, caregiver alerts, and AI-powered assistance.", 
             techStack: ["React Native", "Firebase", "AI APIs"], 
             image: "assets/medicompanionai.jpg",
-            liveDemo: "#", // Replace with your live demo URL
-            github: "https://github.com/hanepo/MediCompanion-AI" // Replace with your GitHub repo URL
+            liveDemo: "https://github.com/naimhakimi-sketch/MediCompanion-AI", // Replace with your live demo URL
+            github: "https://github.com/naimhakimi-sketch/MediCompanion-AI" // Replace with your GitHub repo URL
         },
         { 
             title: "Barber Haircut Booking System", 
             description: "A booking platform for barbershops where customers can schedule haircuts and manage appointments.", 
             techStack: ["React", "Node.js", "MongoDB"], 
             image: "assets/haricut.PNG",
-            liveDemo: "#", // Replace with your live demo URL
-            github: "https://github.com/hanep/barber-booking-system" // Replace with your GitHub repo URL
+            liveDemo: "https://hanepo.github.io/client-barber-demo/", // Replace with your live demo URL
+            github: "https://github.com/hanepo/client-barber-demo.git" // Replace with your GitHub repo URL
         },
         { 
             title: "Portfolio Builder for Clients", 
             description: "A customizable portfolio website solution designed to help clients showcase their work professionally.", 
             techStack: ["React", "Tailwind CSS", "Firebase"], 
             image: "assets/biodataemily.PNG",
-            liveDemo: "#", // Replace with your live demo URL
-            github: "https://github.com/hanepo/emilydesign-website" // Replace with your GitHub repo URL
+            liveDemo: "https://hanepo.github.io/client-website-demo/", // Replace with your live demo URL
+            github: "https://github.com/hanepo/client-website-demo" // Replace with your GitHub repo URL
         }
     ];
     
     const testimonialsData = [
-        { name: "Sarah Johnson", role: "Small Business Owner", content: "Hanep created an amazing e-commerce website for my bakery. The design is beautiful and the ordering system is so easy to use.", avatar: "SJ" },
-        { name: "Michael Chen", role: "Startup Founder", content: "Working with Hanep was fantastic. He delivered a mobile app that exceeded our expectations.", avatar: "MC" },
-        { name: "Emily Rodriguez", role: "Marketing Director", content: "Hanep transformed our outdated website into a modern, responsive platform.", avatar: "ER" }
+        { name: "Aniq", role: "FYP student", content: "Hanep create a website for online ordering system so the waiter doesnt need to take the order from the customer", avatar: "LA" },
+        { name: "Amirul Ash", role: "Barber", content: "He help me create a website for booking online so people dont have to queue to get a hair cut", avatar: "AA" },
+        { name: "Emily Rodriguez", role: "Freelance", content: "Hanep transformed our outdated website into a modern, responsive platform.", avatar: "ER" }
     ];
 
     const contactMethodsData = [
