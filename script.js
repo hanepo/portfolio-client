@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
             description: "A fan club registration website for Aina Abdul fans, allowing users to sign up and manage memberships.", 
             techStack: ["React", "Firebase"], 
             image: "assets/ainaabdul.PNG",
-            liveDemo: "https://hanepo.github.io/ainationsfc-demo/",
+            liveDemo: "https://hanepo.github.io/ainaabdul-demo/",
             github: "https://github.com/hanepo/ainationsfc-demo.git"
         },
         { 
