@@ -1,3 +1,5 @@
+// script.js (Updated)
+
 document.addEventListener("DOMContentLoaded", function() {
     // Data for sections
     const skillsData = [
@@ -15,40 +17,40 @@ document.addEventListener("DOMContentLoaded", function() {
             description: "A complete online food ordering system with menu browsing, cart, and payment features.", 
             techStack: ["React", "Laravel", "MySQL"], 
             image: "assets/restaurantbooking.PNG",
-            liveDemo: "https://hanepo.github.io/client-restaurant-demo/", // Replace with your live demo URL
-            github: "https://github.com/hanepo/client-restaurant-demo.git" // Replace with your GitHub repo URL
+            liveDemo: "https://hanepo.github.io/client-restaurant-demo/",
+            github: "https://github.com/hanepo/client-restaurant-demo.git"
         },
         { 
             title: "Aina Abdul Fans Club Registration System", 
             description: "A fan club registration website for Aina Abdul fans, allowing users to sign up and manage memberships.", 
             techStack: ["React", "Firebase"], 
             image: "assets/ainaabdul.PNG",
-            liveDemo: "https://hanepo.github.io/ainationsfc-demo/", // Replace with your live demo URL
-            github: "https://github.com/hanepo/ainationsfc-demo.git" // Replace with your GitHub repo URL
+            liveDemo: "https://hanepo.github.io/ainationsfc-demo/",
+            github: "https://github.com/hanepo/ainationsfc-demo.git"
         },
         { 
             title: "MediCompanion AI", 
             description: "A healthcare mobile app for elderly users with medication reminders, caregiver alerts, and AI-powered assistance.", 
             techStack: ["React Native", "Firebase", "AI APIs"], 
             image: "assets/medicompanionai.jpg",
-            liveDemo: "https://github.com/naimhakimi-sketch/MediCompanion-AI", // Replace with your live demo URL
-            github: "https://github.com/naimhakimi-sketch/MediCompanion-AI" // Replace with your GitHub repo URL
+            liveDemo: "https://github.com/naimhakimi-sketch/MediCompanion-AI",
+            github: "https://github.com/naimhakimi-sketch/MediCompanion-AI"
         },
         { 
             title: "Barber Haircut Booking System", 
             description: "A booking platform for barbershops where customers can schedule haircuts and manage appointments.", 
             techStack: ["React", "Node.js", "MongoDB"], 
             image: "assets/haricut.PNG",
-            liveDemo: "https://hanepo.github.io/client-barber-demo/", // Replace with your live demo URL
-            github: "https://github.com/hanepo/client-barber-demo.git" // Replace with your GitHub repo URL
+            liveDemo: "https://hanepo.github.io/client-barber-demo/",
+            github: "https://github.com/hanepo/client-barber-demo.git"
         },
         { 
             title: "Portfolio Builder for Clients", 
             description: "A customizable portfolio website solution designed to help clients showcase their work professionally.", 
             techStack: ["React", "Tailwind CSS", "Firebase"], 
             image: "assets/biodataemily.PNG",
-            liveDemo: "https://hanepo.github.io/client-website-demo/", // Replace with your live demo URL
-            github: "https://github.com/hanepo/client-website-demo" // Replace with your GitHub repo URL
+            liveDemo: "https://hanepo.github.io/client-website-demo/",
+            github: "https://github.com/hanepo/client-website-demo"
         }
     ];
     
@@ -64,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function() {
         { icon: 'fa-up-right-from-square', title: 'Fiverr', value: 'fiverr.com/haneprubaie', link: 'https://www.fiverr.com/haneprubaie?public_mode=true', description: 'Hire me on Fiverr' }
     ];
 
-    // Render Functions (renderSkills, renderTestimonials, renderContactMethods, renderFooter are unchanged)
+    // --- RENDER FUNCTIONS (Unchanged) ---
     function renderSkills() {
         const container = document.getElementById('skills-grid');
         if (!container) return;
@@ -163,7 +165,7 @@ document.addEventListener("DOMContentLoaded", function() {
         `;
     }
 
-    // --- INTERACTIVITY ---
+    // --- INTERACTIVITY (Unchanged) ---
     const mobileMenuButton = document.querySelector('.mobile-menu-button');
     const navLinksContainer = document.querySelector('.nav-links');
     if (mobileMenuButton && navLinksContainer) {
@@ -237,16 +239,45 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
+    // --- NEW CONTACT FORM LOGIC ---
+    // Initialize EmailJS with your Public Key
+    (function(){
+        emailjs.init('dPeG9iFym_2y2EQsZ'); // Your Public Key
+    })();
+
     const contactForm = document.getElementById('contact-form');
     if(contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            alert("Thank you for your message. I'll get back to you soon!");
-            this.reset();
+
+            const submitButton = this.querySelector('.form-submit-btn');
+            const originalButtonText = submitButton.innerHTML;
+            submitButton.disabled = true;
+            submitButton.innerHTML = 'Sending...';
+
+            const serviceID = 'service_74qdjmi'; // Your Service ID
+            const templateID = 'template_f3nx5wc'; // Your Template ID
+
+            // Send the form data to EmailJS
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(() => {
+                    submitButton.innerHTML = 'Message Sent!';
+                    alert('Thank you for your message. I\'ll get back to you soon!');
+                    this.reset();
+                    // Optional: Reset button text after a few seconds
+                    setTimeout(() => {
+                        submitButton.disabled = false;
+                        submitButton.innerHTML = originalButtonText;
+                    }, 3000);
+                }, (err) => {
+                    submitButton.disabled = false;
+                    submitButton.innerHTML = originalButtonText;
+                    alert('Failed to send message. Error: ' + JSON.stringify(err));
+                });
         });
     }
 
-    // Initialize all sections
+    // --- INITIALIZE ALL SECTIONS ---
     renderSkills();
     renderProjects();
     renderTestimonials();
@@ -254,4 +285,3 @@ document.addEventListener("DOMContentLoaded", function() {
     renderFooter();
     addProjectClickListeners();
 });
-
