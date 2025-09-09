@@ -36,6 +36,14 @@ document.addEventListener("DOMContentLoaded", function() {
             liveDemo: "https://github.com/naimhakimi-sketch/MediCompanion-AI",
             github: "https://github.com/naimhakimi-sketch/MediCompanion-AI"
         },
+        {
+        title: "Retail Stock Manager",
+        description: "Developed a web-based stock management system for retail shops to replace manual bookkeeping. The platform allows shop owners to easily add, update, and monitor inventory, with low-stock alerts and report generation for smarter decision making.",
+        techStack: ["React", "Tailwind CSS", "Firebase Auth", "Firestore"],
+        image: "assets/retails.PNG", // Update path if needed
+        liveDemo: "https://amazing-truffle-5ba84d.netlify.app/", // Replace with your actual demo link
+        github: "https://github.com/hanepo/retails-store"
+        },
         { 
             title: "Barber Haircut Booking System", 
             description: "A booking platform for barbershops where customers can schedule haircuts and manage appointments.", 
